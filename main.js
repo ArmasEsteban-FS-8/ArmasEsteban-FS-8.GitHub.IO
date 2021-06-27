@@ -35,6 +35,8 @@
 //     alert("You have ordered to many surfboards! Max is 10. ");
 // }
 
+// commented above code was previous application
+
 // Below Will be the Javascript Application
 let mainHeading = document.getElementsByTagName('h1');
 console.log(mainHeading);
@@ -42,14 +44,16 @@ let heading2 = document.getElementsByTagName('h2');
 console.log(heading2);
 let heading3 = document.getElementsByTagName('h3');
 console.log(heading3);
-
+// main title query selector
 let mainTitle = document.querySelector('h1');
+// changed style and inner html
 mainTitle.style.fontSize = '100px';
 mainTitle.style.fontFamily = 'Comic Sans MS';
 mainTitle.innerHTML = 'SURFS UP!'
 
-
+// main paragraph
 let mainParagraph = document.querySelector("p");
+// changed innerHTML and style
 mainParagraph.innerHTML = "Surfboards have been around for ages and we are excited to produce and manufacture " +
     "for our customers who are interested in learning the art of riding the waves of the Ocean. " +
     "Modern surfboards are made of polyurethane or polystyrene foam covered with layers of fiberglass cloth, " +
@@ -57,12 +61,14 @@ mainParagraph.innerHTML = "Surfboards have been around for ages and we are excit
 mainParagraph.style.fontSize = "26px";
 mainParagraph.style.fontFamily = 'Comic Sans MS';
 
+// headings
 let headingDescription = document.querySelector('h3');
 headingDescription.style.fontFamily = 'Comic Sans MS';
 
 let surfBoardName = document.querySelector('h4');
 surfBoardName.style.fontFamily = 'Comic Sans MS';
 
+// browse title
 let browseTitle = document.getElementById('heading2');
 browseTitle.innerHTML = 'Below are Surfboards to Browse and add to your Cart.';
 browseTitle.style.fontFamily = 'Comic Sans MS';
@@ -79,7 +85,14 @@ function boardQuantity(){
 
     let number = 0;
     number = Number(board1) + Number(board2) + Number(board3) + Number(board4) + Number(board5);
-    document.getElementById('addedCArt').innerHTML = "You added " +  number + " surf boards to your cart";
+    // if user clicks button with values in inputs then notify user. Validation
+    if(number != 0){
+        document.getElementById('addedCArt').innerHTML = "You added " +  number + " surf boards to your cart";
+    }
+    else{
+        document.getElementById('addedCArt').innerHTML = "Please add more then 1 Surfboard.";
+    }
+
 
 
 
